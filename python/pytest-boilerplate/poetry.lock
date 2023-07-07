@@ -205,13 +205,13 @@ testing = ["argcomplete", "attrs (>=19.2.0)", "hypothesis (>=3.56)", "mock", "no
 
 [[package]]
 name = "pytest-dogu-report"
-version = "1.0.0"
+version = "1.0.1"
 description = "pytest plugin for dogu report"
 optional = false
 python-versions = ">=3.9,<4.0"
 files = [
-    {file = "pytest_dogu_report-1.0.0-py3-none-any.whl", hash = "sha256:35580d5e589187bc452a66e55b1012020f8920468cf813dcf262d9af7e340539"},
-    {file = "pytest_dogu_report-1.0.0.tar.gz", hash = "sha256:230fd2b1958b8808721ced6b3667684ff6aeedd82a27cac411a3643638f46c60"},
+    {file = "pytest_dogu_report-1.0.1-py3-none-any.whl", hash = "sha256:b7e0b47ffadbce1fae9728bb5c1aae35f9ab615a5a3bf90173c1f8d735ea98ec"},
+    {file = "pytest_dogu_report-1.0.1.tar.gz", hash = "sha256:fec19f8e019b74d51f4226babdba5bf3cd7e8da7a77a9c861749e2bf92be7d91"},
 ]
 
 [package.dependencies]
@@ -270,4 +270,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.9"
-content-hash = "b8ef8ae099ea4aaeb0a719540bb6b5e884c00768ab1f223edb1d3b72f4bd5663"
+content-hash = "7947efe07ddc89d3bb79799e825f772534fadccc6c68286c181408517d355983"
