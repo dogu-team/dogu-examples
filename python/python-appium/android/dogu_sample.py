@@ -10,7 +10,6 @@ options = UiAutomator2Options().load_capabilities(
         # Specify dogu:options for testing
         "platformName": "android",
         "dogu:options": {
-            "userName": "",
             "accessKey": "",
             "organizationId": "",
             "projectId": "",
