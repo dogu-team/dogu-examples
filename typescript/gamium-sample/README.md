@@ -1,1 +1,1 @@
-# dogu-examples/test-script-sample
+# Typescript Gamium example
