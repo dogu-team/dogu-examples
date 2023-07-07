@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "pytest-bdd-playwright"
+version = "1.0.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+packages = [{include = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+
+[tool.poetry.group.dev.dependencies]
+pytest-dogu-report = "^1.0.1"
+pytest-bdd = "^6.1.1"
+pytest-playwright = "^0.3.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = ""
+testpaths = [
+    "tests",
+]
