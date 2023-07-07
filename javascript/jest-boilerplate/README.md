@@ -1,4 +1,4 @@
-# jest-boilerplate
+# dogu-examples/javascript/jest-boilerplate
 
 ## requirements
 

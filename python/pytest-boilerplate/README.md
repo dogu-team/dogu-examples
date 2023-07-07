@@ -1,4 +1,4 @@
-# pytest-boilerplate
+# dogu-examples/python/pytest-boilerplate
 
 ## requirements
 - python 3.9 or higher

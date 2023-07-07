@@ -1,4 +1,4 @@
-# pytest-bdd-playwright
+# dogu-examples/python/pytest-bdd-playwright
 
 ## requirements
 - python 3.9 or higher

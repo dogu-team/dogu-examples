@@ -1,4 +1,4 @@
-# pytest-bdd-boilerplate
+# dogu-examples/python/pytest-bdd-boilerplate
 
 ## requirements
 - python 3.9 or higher
