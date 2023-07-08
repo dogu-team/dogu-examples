@@ -1,17 +1,16 @@
-const { remote } = require('webdriverio');
+const driver = globalThis.driver;
 
-beforeAll(async () => {
-  this.driver = await remote({
-    capabilities: {
-      browserName: 'chrome'
-    }
-  })
-});
+describe('test dogu', () => {
+  test('go to dogutech.io', async () => {
+    await driver.url('https://dogutech.io');
+  });
 
-afterAll(async () => {
-  await this.driver?.deleteSession();
-});
+  test('find dogu image on header', async () => {
+    this.dogu = await driver.$('//header//img[@alt="Dogu"]');
+  });
 
-test('test', async () => {
-  await this.driver.url('https://dogutech.io');
+  test('check dogu image src', async () => {
+    const src = await this.dogu.getAttribute('src');
+    expect(src).toBe("/resources/icons/logo-horizontal.svg");
+  });
 });
