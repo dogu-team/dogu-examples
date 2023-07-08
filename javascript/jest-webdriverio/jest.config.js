@@ -1,4 +1,4 @@
-/** @type {import('@jest/types').Config.InitialOptions} */
+/** @type {import('jest').Config} */
 module.exports = {
   testEnvironment: '@dogu-tech/jest-environment',
   globalSetup: './jest.global-setup.js',
