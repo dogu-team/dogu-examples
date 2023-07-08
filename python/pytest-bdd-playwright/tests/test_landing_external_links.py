@@ -14,7 +14,7 @@ def go_to_landing(page: Page):
 def click_documentation_link(page: Page):
     with page.context.expect_page() as new_page_info:
         page.click(
-            'xpath=//*[@id="__next"]/section/section/header/div/div/div[1]/div/div/span[3]/a'
+            'xpath=//a[contains(@href,"docs.dogutech.io")]'
         )
     return new_page_info.value
 
@@ -28,14 +28,14 @@ def on_documentation_page(docs_page: Page):
 def click_community_link(page: Page):
     with page.context.expect_page() as new_page_info:
         page.click(
-            'xpath=//*[@id="__next"]/section/section/header/div/div/div[1]/div/div/span[4]/a'
+            'xpath=//a[@href="https://discord.com/invite/bVycd6Tu9g"]'
         )
     return new_page_info.value
 
 
 @then("I should be on the community page")
 def on_community_page(community_page: Page):
-    expect(community_page).to_have_url("https://docs.dogutech.io/community/discord")
+    expect(community_page).to_have_url("https://discord.com/invite/bVycd6Tu9g")
 
 
 @when("I click on the Github link", target_fixture="github_page")

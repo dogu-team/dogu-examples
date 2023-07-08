@@ -19,7 +19,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-addopts = ""
+addopts = "--tracing=on --video=on --screenshot=on"
 testpaths = [
     "tests",
 ]
