@@ -4,15 +4,22 @@ from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
+import os
+
+# if called from Dogu Routine, the following environment variables will be injected from Dogu Routine.
+# if you want to run this script locally, please set your access key here.
+access_key = os.environ.get("DOGU_ACCESS_KEY", "")
+organization_id = os.environ.get("DOGU_ORGANIZATION_ID", "")
+project_id = os.environ.get("DOGU_PROJECT_ID", "")
 
 options = UiAutomator2Options().load_capabilities(
     {
         # Specify dogu:options for testing
         "platformName": "android",
         "dogu:options": {
-            "accessKey": "",
-            "organizationId": "",
-            "projectId": "",
+            "accessKey": access_key,
+            "organizationId": organization_id,
+            "projectId": project_id,
             "tag": "android",
             "appVersion": "2.5.194-alpha-2017-05-30",
         },
