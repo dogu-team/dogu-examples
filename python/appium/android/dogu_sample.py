@@ -8,9 +8,9 @@ import os
 
 # if called from Dogu Routine, the following environment variables will be injected from Dogu Routine.
 # if you want to run this script locally, please set your access key here.
-access_key = os.environ.get("DOGU_ACCESS_KEY", "")
-organization_id = os.environ.get("DOGU_ORGANIZATION_ID", "")
-project_id = os.environ.get("DOGU_PROJECT_ID", "")
+access_key = os.environ.get("DOGU_ACCESS_KEY", "INSERT_YOUR_ACCESS_KEY")
+organization_id = os.environ.get("DOGU_ORGANIZATION_ID", "INSERT_YOUR_ORGANIZATION_ID")
+project_id = os.environ.get("DOGU_PROJECT_ID", "INSERT_YOUR_PROJECT_ID")
 
 options = UiAutomator2Options().load_capabilities(
     {
