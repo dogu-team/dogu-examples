@@ -5,7 +5,7 @@ import { remote } from 'webdriverio'
 const browser = await remote({
   hostname: 'api.dogutech.io',
   port: 80,
-  path: '/wd/hub',
+  path: '/remote/wd/hub',
   capabilities: {
     platformName: "android",
     'appium:automationName': "uiautomator2",

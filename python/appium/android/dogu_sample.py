@@ -21,7 +21,7 @@ options = UiAutomator2Options().load_capabilities(
 
 # Initialize the remote Webdriver using Dogu remote URL
 # and options defined above
-driver = webdriver.Remote("https://api.dogutech.io/wd/hub", options=options)
+driver = webdriver.Remote("https://api.dogutech.io/remote/wd/hub", options=options)
 
 search_element = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((AppiumBy.ACCESSIBILITY_ID, "Search Wikipedia")))
 search_element.click()
