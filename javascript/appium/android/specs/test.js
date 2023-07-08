@@ -8,8 +8,38 @@ const organizationId = process.env.DOGU_ORGANIZATION_ID || 'INSERT_YOUR_ORGANIZA
 const projectId = process.env.DOGU_PROJECT_ID || 'INSERT_YOUR_PROJECT_ID';
 const apiBaseUrl = process.env.DOGU_API_BASE_URL || 'https://api.dogutech.io';
 
+function parseUrl(url) {
+  const regex = /^(https?):\/\/([^:\/\s]+)(:([0-9]+))?\/?/i;
+  const matches = url.match(regex);
+  if (!matches) {
+    throw new Error(`Invalid apiBaseUrl: ${url}`);
+  }
+  const [, protocol, hostname, , port] = matches;
+  if (typeof protocol !== 'string') {
+    throw new Error(`Invalid protocol: ${protocol}`);
+  }
+  if (typeof hostname !== 'string') {
+    throw new Error(`Invalid hostname: ${hostname}`);
+  }
+  if (port && typeof port !== 'string') {
+    throw new Error(`Invalid port: ${port}`);
+  }
+  if (port) {
+    const portNumber = parseInt(port, 10);
+    if (Number.isNaN(portNumber)) {
+      throw new Error(`Invalid port: ${port}`);
+    }
+    return { protocol, hostname, port: portNumber };
+  }
+  return { protocol, hostname, port: protocol === 'https' ? 443 : 80 };
+}
+
+const { protocol, hostname, port } = parseUrl(apiBaseUrl);
+
 const browser = await remote({
-  baseUrl: apiBaseUrl,
+  protocol,
+  hostname,
+  port,
   path: '/remote/wd/hub',
   capabilities: {
     platformName: "android",
