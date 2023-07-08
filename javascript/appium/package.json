@@ -2,7 +2,7 @@
   "name": "webdriverio-appium-app",
   "version": "0.0.1",
   "scripts": {
-    "test": "node specs/test.js"
+    "test": "node android/specs/test.js"
   },
   "type": "module",
   "dependencies": {
