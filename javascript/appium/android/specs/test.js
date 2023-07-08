@@ -6,10 +6,10 @@ import { remote } from 'webdriverio'
 const accessKey = process.env.DOGU_ACCESS_KEY || 'INSERT_YOUR_ACCESS_KEY';
 const organizationId = process.env.DOGU_ORGANIZATION_ID || 'INSERT_YOUR_ORGANIZATION_ID';
 const projectId = process.env.DOGU_PROJECT_ID || 'INSERT_YOUR_PROJECT_ID';
+const apiBaseUrl = process.env.DOGU_API_BASE_URL || 'https://api.dogutech.io';
 
 const browser = await remote({
-  hostname: 'api.dogutech.io',
-  port: 80,
+  baseUrl: apiBaseUrl,
   path: '/remote/wd/hub',
   capabilities: {
     platformName: "android",

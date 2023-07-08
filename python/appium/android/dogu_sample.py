@@ -11,6 +11,7 @@ import os
 access_key = os.environ.get("DOGU_ACCESS_KEY", "INSERT_YOUR_ACCESS_KEY")
 organization_id = os.environ.get("DOGU_ORGANIZATION_ID", "INSERT_YOUR_ORGANIZATION_ID")
 project_id = os.environ.get("DOGU_PROJECT_ID", "INSERT_YOUR_PROJECT_ID")
+api_base_url = os.environ.get("DOGU_API_BASE_URL", "https://api.dogutech.io")
 
 options = UiAutomator2Options().load_capabilities(
     {
@@ -28,7 +29,7 @@ options = UiAutomator2Options().load_capabilities(
 
 # Initialize the remote Webdriver using Dogu remote URL
 # and options defined above
-driver = webdriver.Remote("https://api.dogutech.io/remote/wd/hub", options=options)
+driver = webdriver.Remote(f"{api_base_url}/remote/wd/hub", options=options)
 
 search_element = WebDriverWait(driver, 30).until(EC.element_to_be_clickable((AppiumBy.ACCESSIBILITY_ID, "Search Wikipedia")))
 search_element.click()
