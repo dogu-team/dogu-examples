@@ -1,6 +1,6 @@
 {
   "scriptFolderPaths": [
-    "javascript/jest-webdriverio/tests",
-    "python/pytest-bdd-playwright/tests"
+    "unittest/javascript/jest-webdriverio/tests/",
+    "unittest/python/pytest-bdd-playwright/tests/"
   ]
 }
