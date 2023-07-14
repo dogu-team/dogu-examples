@@ -48,7 +48,7 @@ const browser = await remote({
         accessKey,
         organizationId,
         projectId,
-        tag: "android",
+        'runs-on': "android",
         appVersion: "2.5.194-alpha-2017-05-30",
     },
   }
