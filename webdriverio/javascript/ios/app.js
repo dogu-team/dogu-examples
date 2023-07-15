@@ -47,8 +47,8 @@ const driver = await remote({
       accessKey,
       organizationId,
       projectId,
-      'runs-on': 'android',
-      appVersion: '2.5.194-alpha-2017-05-30',
+      'runs-on': 'ios',
+      appVersion: 'YOUR_APP_VERSION',
     },
   },
 });
