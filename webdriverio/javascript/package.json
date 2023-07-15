@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node android/app.js"
+    "test:android:app": "node android/app.js",
+    "test:android:web": "node android/chrome.js",
+    "test:ios:web": "node ios/chrome.js",
+    "test:macos:web": "node macos/chrome.js",
+    "test:windows:web": "node windows/chrome.js"
   },
   "author": "",
   "license": "ISC",
