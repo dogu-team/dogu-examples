@@ -47,7 +47,7 @@ const driver = await remote({
       token,
       organizationId,
       projectId,
-      'runs-on': 'ios',
+      runsOn: 'ios',
       appVersion: 'YOUR_APP_VERSION',
     },
   },

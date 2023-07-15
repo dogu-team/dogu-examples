@@ -46,7 +46,7 @@ const driver = await remote({
       token,
       organizationId,
       projectId,
-      'runs-on': 'macos',
+      runsOn: 'macos',
       browserName: 'chrome',
     },
   },

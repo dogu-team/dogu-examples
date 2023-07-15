@@ -47,7 +47,7 @@ const driver = await remote({
       token,
       organizationId,
       projectId,
-      'runs-on': 'android',
+      runsOn: 'android',
       appVersion: '2.5.194-alpha-2017-05-30',
     },
   },

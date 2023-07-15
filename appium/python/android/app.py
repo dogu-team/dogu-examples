@@ -20,7 +20,7 @@ options = AppiumOptions().load_capabilities(
             "token": token,
             "organizationId": organization_id,
             "projectId": project_id,
-            "runs-on": "android",
+            "runsOn": "android",
             "appVersion": "2.5.194-alpha-2017-05-30",
         },
     }
