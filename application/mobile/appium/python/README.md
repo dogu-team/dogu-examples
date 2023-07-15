@@ -1,1 +1,0 @@
-# dogu-examples/python/appium
