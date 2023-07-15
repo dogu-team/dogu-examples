@@ -36,7 +36,7 @@ function parseUrl(url) {
 
 const { protocol, hostname, port } = parseUrl(apiBaseUrl);
 
-const browser = await remote({
+const driver = await remote({
   protocol,
   hostname,
   port,
@@ -52,17 +52,17 @@ const browser = await remote({
   },
 });
 
-var searchSelector = await browser.$(`~Search Wikipedia`);
+var searchSelector = await driver.$(`~Search Wikipedia`);
 await searchSelector.waitForDisplayed({ timeout: 30000 });
 await searchSelector.click();
 
-var insertTextSelector = await browser.$('android=new UiSelector().resourceId("org.wikipedia.alpha:id/search_src_text")');
+var insertTextSelector = await driver.$('android=new UiSelector().resourceId("org.wikipedia.alpha:id/search_src_text")');
 await insertTextSelector.waitForDisplayed({ timeout: 30000 });
 
 await insertTextSelector.addValue('Wikipedia');
-await browser.pause(5000);
+await driver.pause(5000);
 
-var allProductsName = await browser.$$(`android.widget.TextView`);
+var allProductsName = await driver.$$(`android.widget.TextView`);
 assert(allProductsName.length > 0);
 
-await browser.deleteSession();
+await driver.deleteSession();
