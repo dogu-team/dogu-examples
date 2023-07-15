@@ -1,4 +1,4 @@
-# dogu-examples/javascript/jest-webdriverio
+# dogu-examples/webdriverio/javascript
 
 ## requirements
 

@@ -1,16 +1,15 @@
 {
-  "name": "jest-webdriverio",
+  "name": "webdriverio-javascript",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest tests"
+    "test": "node android/app.js"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
-    "@dogu-tech/jest-environment": "^1.0.3",
-    "jest": "^29.6.1",
-    "webdriverio": "^7.32.0"
-  }
+  "dependencies": {
+    "webdriverio": "^8.13.1"
+  },
+  "type": "module"
 }
