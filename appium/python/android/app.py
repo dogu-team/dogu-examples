@@ -1,5 +1,5 @@
 from appium import webdriver
-from appium.options.android import UiAutomator2Options
+from appium.options.common import AppiumOptions
 from appium.webdriver.common.appiumby import AppiumBy
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
@@ -13,10 +13,9 @@ organization_id = os.environ.get("DOGU_ORGANIZATION_ID", "INSERT_YOUR_ORGANIZATI
 project_id = os.environ.get("DOGU_PROJECT_ID", "INSERT_YOUR_PROJECT_ID")
 api_base_url = os.environ.get("DOGU_API_BASE_URL", "https://api.dogutech.io")
 
-options = UiAutomator2Options().load_capabilities(
+options = AppiumOptions().load_capabilities(
     {
         # Specify dogu:options for testing
-        "platformName": "android",
         "dogu:options": {
             "accessKey": access_key,
             "organizationId": organization_id,
