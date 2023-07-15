@@ -8,7 +8,7 @@ import os
 
 # if called from Dogu Routine, the following environment variables will be injected from Dogu Routine.
 # if you want to run this script locally, please set your access key here.
-access_key = os.environ.get("DOGU_ACCESS_KEY", "INSERT_YOUR_ACCESS_KEY")
+token = os.environ.get("DOGU_TOKEN", "INSERT_YOUR_TOKEN")
 organization_id = os.environ.get("DOGU_ORGANIZATION_ID", "INSERT_YOUR_ORGANIZATION_ID")
 project_id = os.environ.get("DOGU_PROJECT_ID", "INSERT_YOUR_PROJECT_ID")
 api_base_url = os.environ.get("DOGU_API_BASE_URL", "https://api.dogutech.io")
@@ -17,7 +17,7 @@ options = AppiumOptions().load_capabilities(
     {
         # Specify dogu:options for testing
         "dogu:options": {
-            "accessKey": access_key,
+            "token": token,
             "organizationId": organization_id,
             "projectId": project_id,
             "runs-on": "android",

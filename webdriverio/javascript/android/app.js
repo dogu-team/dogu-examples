@@ -3,7 +3,7 @@ import { remote } from 'webdriverio';
 
 // if called from Dogu Routine, the following environment variables will be injected from Dogu Routine.
 // if you want to run this script locally, please set your access key here.
-const accessKey = process.env.DOGU_ACCESS_KEY || 'INSERT_YOUR_ACCESS_KEY';
+const token = process.env.DOGU_TOKEN || 'INSERT_YOUR_TOKEN';
 const organizationId = process.env.DOGU_ORGANIZATION_ID || 'INSERT_YOUR_ORGANIZATION_ID';
 const projectId = process.env.DOGU_PROJECT_ID || 'INSERT_YOUR_PROJECT_ID';
 const apiBaseUrl = process.env.DOGU_API_BASE_URL || 'https://api.dogutech.io';
@@ -44,7 +44,7 @@ const driver = await remote({
   path: '/remote/wd/hub',
   capabilities: {
     'dogu:options': {
-      accessKey,
+      token,
       organizationId,
       projectId,
       'runs-on': 'android',
