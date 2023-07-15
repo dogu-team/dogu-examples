@@ -16,10 +16,10 @@ options = AppiumOptions().load_capabilities(
     {
         # Specify dogu:options for testing
         "dogu:options": {
-            "accessKey": token,
+            "token": token,
             "organizationId": organization_id,
             "projectId": project_id,
-            "runs-on": "android",  # or "ios"
+            "runsOn": "android",  # or "ios"
             "browserName": "chrome",  # or "safari" on ios
         },
     }
