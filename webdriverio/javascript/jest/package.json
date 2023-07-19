@@ -4,13 +4,14 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:windows": "jest windows/test.js"
+    "test:web": "jest web/chrome.test.js",
+    "test:app:android": "jest app/android.test.js"
   },
   "keywords": [],
   "author": "Dogu Technologies",
   "license": "ISC",
   "devDependencies": {
-    "@dogu-tech/jest-environment": "^1.1.0-rc.2",
+    "@dogu-tech/jest-environment": "^1.1.0-rc.7",
     "jest": "^29.6.1"
   },
   "type": "module"
