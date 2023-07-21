@@ -1,0 +1,2 @@
+selenium==4.10.0
+pytest-dogu-sdk==1.0.2
