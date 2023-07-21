@@ -1,3 +1,4 @@
 Appium-Python-Client==2.3.0;python_version >= '3.0'
 selenium==4.3.0;
 pytest-dogu-sdk==1.0.2
+pytest==7.4.0
