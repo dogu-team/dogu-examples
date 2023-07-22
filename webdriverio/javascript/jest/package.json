@@ -11,7 +11,7 @@
   "author": "Dogu Technologies",
   "license": "ISC",
   "devDependencies": {
-    "@dogu-tech/jest-environment": "^1.1.1",
+    "@dogu-tech/jest-environment": "^1.1.2",
     "jest": "^29.6.1"
   },
   "type": "module"
