@@ -1,0 +1,20 @@
+{
+  "name": "@dogu-examples/gamium-javascript-jest",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test:app:android": "jest app/android.dogurpgsample.test.js --runInBand"
+  },
+  "keywords": [],
+  "author": "Dogu Technologies",
+  "license": "ISC",
+  "dependencies": {
+    "gamium": "2.0.3"
+  },
+  "devDependencies": {
+    "@dogu-tech/jest-environment": "^1.1.2",
+    "jest": "^29.6.1"
+  },
+  "type": "commonjs"
+}
