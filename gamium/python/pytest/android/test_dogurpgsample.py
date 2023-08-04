@@ -2,7 +2,7 @@ import uuid
 
 from appium.webdriver.webdriver import WebDriver
 from selenium.webdriver.support import expected_conditions as EC
-from pytest_dogu_sdk.common import DoguClient
+from pytest_dogu_sdk.common import DoguClient, DoguConfig
 from gamium import *
 
 
@@ -10,10 +10,12 @@ gamium = None
 ui = None
 
 
-def test_connect(dogu_client: DoguClient):
+def test_connect(dogu_client: DoguClient, dogu_config: DoguConfig):
     session_id = dogu_client.cast(WebDriver).session_id
     devicePort = 50061
-    url = f"ws://127.0.0.1:4000/ws/remote/gamium?sessionId={session_id}&port={devicePort}"
+    hostAndPort = dogu_config.api_base_url.replace("http://", "").replace("https://", "")
+
+    url = f"ws://{hostAndPort}/ws/remote/gamium?sessionId={session_id}&port={devicePort}"
     service = WebsocketGamiumService(url)
     global gamium
     global ui
