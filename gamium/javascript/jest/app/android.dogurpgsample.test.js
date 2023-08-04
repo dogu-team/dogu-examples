@@ -1,5 +1,3 @@
-// @ts-nocheck
-
 const {
   By,
   GamiumClient,
@@ -16,7 +14,8 @@ let ui;
 beforeAll( async () => {
   const sessionId = driver.sessionId;
   const devicePort = 50061;
-  const url = `ws://127.0.0.1:4000/ws/remote/gamium?sessionId=${sessionId}&port=${devicePort}`;
+  const { hostname, port } = doguConfig.parseApiBaseUrl();
+  const url = `ws://${hostname}:${port}/ws/remote/gamium?sessionId=${sessionId}&port=${devicePort}`;
   const gamiumService = new WebsocketGamiumService(url);
   await gamiumService.connect();
   gamium = new GamiumClient(gamiumService);
