@@ -31,7 +31,7 @@ pip3 install -r requirements.txt
 
 ```shell
 # "browserName" must exist in dogu.config.json
-pytest android/test_web.py
+pytest web/test_web.py
 ```
 
 ### Android app test
@@ -39,5 +39,12 @@ pytest android/test_web.py
 ```shell
 # "appVersion" must exist in dogu.config.json
 # "browserName" must NOT exist in dogu.config.json
-pytest android/test_app.py
+pytest app/test_android.py
+```
+
+### iOS web test
+
+```shell
+# "browserName" must exist in dogu.config.json
+pytest web/test_web.py
 ```
