@@ -32,5 +32,5 @@ pip3 install -r requirements.txt
 ```shell
 # "appVersion" must exist in dogu.config.json
 # "browserName" must NOT exist in dogu.config.json
-pytest android/test_dogurpgsample.py
+pytest app/test_dogurpgsample.py
 ```

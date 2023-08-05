@@ -2,7 +2,7 @@
 
 ## Requirements
 
-* Python 3.9 or higher
+- Python 3.9 or higher
 
 ## Activate virtual environment
 
@@ -10,13 +10,13 @@
 python3 -m venv .venv
 
 # on Windows powershell
-.venv\Scripts\activate.ps1 
+.venv\Scripts\activate.ps1
 
 # on Windows cmd
-.venv\Scripts\activate.bat 
+.venv\Scripts\activate.bat
 
 # on Linux/MacOS
-source .venv/bin/activate 
+source .venv/bin/activate
 ```
 
 ## Installation
@@ -31,5 +31,5 @@ pip3 install -r requirements.txt
 
 ```shell
 # "browserName" must exist in dogu.config.json
-pytest desktop/test_web.py
+pytest web/test_web.py
 ```
