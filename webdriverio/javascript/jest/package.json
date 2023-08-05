@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:web": "jest web/chrome.test.js",
+    "test:web": "jest web/web.test.js",
     "test:app:android": "jest app/android.test.js"
   },
   "keywords": [],
