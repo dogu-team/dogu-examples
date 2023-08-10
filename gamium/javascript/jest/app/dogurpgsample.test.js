@@ -16,9 +16,8 @@ beforeAll( async () => {
   const devicePort = 50061;
   const { hostname, port } = doguConfig.parseApiBaseUrl();
   const url = `ws://${hostname}:${port}/ws/remote/gamium?sessionId=${sessionId}&port=${devicePort}`;
-  const gamiumService = new WebsocketGamiumService(url);
-  await gamiumService.connect();
-  gamium = new GamiumClient(gamiumService);
+  gamium = new GamiumClient(new WebsocketGamiumService(url));
+  await gamium.connect();
   ui = gamium.ui();
 });
 
@@ -320,4 +319,5 @@ test("Check Quest Done", async () => {
 afterAll(async () => {
   await gamium.sleep(4000);
   await gamium.actions().appQuit().perform();
+  await gamium.disconnect();
 });
