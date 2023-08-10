@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test:app:android": "jest app/android.dogurpgsample.test.js"
+    "test:app:android": "jest app/android.dogurpgsample.test.js --runInBand"
   },
   "keywords": [],
   "author": "Dogu Technologies",

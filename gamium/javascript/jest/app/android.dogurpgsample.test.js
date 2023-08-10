@@ -136,7 +136,7 @@ test("Sell items", async () => {
     );
     return false;
   };
-  await gamium.wait(waitUntilInteractable, { timeoutMs: 10000 });
+  await gamium.wait(waitUntilInteractable, { timeoutMs: 30000 });
 
   await ui.click(By.path("/Canvas[1]/ShopView[1]/UIRoot[1]/RoundButton[1]"));
 });
