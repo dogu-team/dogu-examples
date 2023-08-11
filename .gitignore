@@ -7,3 +7,9 @@
 # python
 __pycache__
 .venv
+
+# pytest
+.pytest_cache
+
+# playwright
+test-results
