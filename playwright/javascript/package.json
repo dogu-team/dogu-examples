@@ -1,0 +1,17 @@
+{
+  "name": "playwright-javascript",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "pretest": "cross-env SELENIUM_REMOTE_URL=MY_API_BASE_URL/remote/wd/hub cross-env SELENIUM_REMOTE_CAPABILITIES={\"dogu:options\":{\"apiBaseUrl\":\"MY_API_BASE_URL\",\"organizationId\":\"MY_ORGANIZATION_ID\",\"projectId\":\"MY_PROJECT_ID\",\"token\":\"MY_TOKEN\",\"runsOn\":\"windows\",\"browserName\":\"chrome\"}}",
+    "test": "playwright test --headed --browser chromium web/playwright.test.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.36.2",
+    "cross-env": "^7.0.3"
+  }
+}

@@ -1,4 +1,4 @@
-# playwright/python/pytest
+# @dogu-examples/playwright-python-pytest (experimental)
 
 ## Requirements
 
