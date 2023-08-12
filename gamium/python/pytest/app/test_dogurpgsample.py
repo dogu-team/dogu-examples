@@ -14,8 +14,8 @@ def test_connect(dogu_client: DoguClient, dogu_config: DoguConfig):
     session_id = dogu_client.cast(WebDriver).session_id
     devicePort = 50061
     hostAndPort = dogu_config.api_base_url.replace("http://", "").replace("https://", "")
-
-    url = f"ws://{hostAndPort}/ws/remote/gamium?sessionId={session_id}&port={devicePort}"
+    wsProtocol = "wss" if dogu_config.api_base_url.startswith("https") else "ws"
+    url = f"{wsProtocol}://{hostAndPort}/ws/remote/gamium?sessionId={session_id}&port={devicePort}"
     service = WebsocketGamiumService(url)
     global gamium
     global ui
