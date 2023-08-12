@@ -11,11 +11,12 @@ const { test } = require("@jest/globals");
 let gamium;
 let ui;
 
-beforeAll( async () => {
+beforeAll(async () => {
   const sessionId = driver.sessionId;
   const devicePort = 50061;
-  const { hostname, port } = doguConfig.parseApiBaseUrl();
-  const url = `ws://${hostname}:${port}/ws/remote/gamium?sessionId=${sessionId}&port=${devicePort}`;
+  const { protocol, hostname, port } = doguConfig.parseApiBaseUrl();
+  const wsProtocol = protocol === "https" ? "wss" : "ws";
+  const url = `${wsProtocol}://${hostname}:${port}/ws/remote/gamium?sessionId=${sessionId}&port=${devicePort}`;
   gamium = new GamiumClient(new WebsocketGamiumService(url));
   await gamium.connect();
   ui = gamium.ui();
@@ -116,7 +117,7 @@ test("Buy Products", async () => {
 });
 
 test("Sell items", async () => {
-  const waitUntilInteractable = async ()  => {
+  const waitUntilInteractable = async () => {
     const items = await ui.finds(
       By.path(
         "/Canvas[1]/ShopView[1]/UIRoot[1]/Layout[1]/RightPanel[1]/ItemGridView[1]/GridPanel[1]/ItemSlot(Clone)/Text"
